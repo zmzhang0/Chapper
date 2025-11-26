@@ -1,8 +1,8 @@
-# Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing[Project page](https://zmzhang0.github.io/projects/Chapper/index.html)
+# Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing[Project page]
 
 > SIGGRAPH Asia 2025 (Journal Track, ACM Transactions on Graphics)
 
-&#x20;![](README_md_files/42491c50-cabe-11f0-af30-db5ea7b9c052.jpeg?v=1&type=image)
+![teaser](teaser.png)
 
 Chapper framework achieves compact packing with high space utilization while ensuring all objects satisfy the carvable constraints. We introduce a novel carving hull extraction method that computes a carving hull for each object, capturing both its shape and subtractive manufacturability, constrained by neighboring geometry and encoding machining paths. This figure illustrates our method packing 160 complex benchmark objects (a) densely into a cube (b) with 21.6 % space utilization. It also produces a disassembly sequence (d) and corresponding carving hulls (c). Each object is fully enclosed by its carving hull, which guides toolpath generation and enables feasible disassembly.
 
@@ -17,8 +17,6 @@ Chapper framework achieves compact packing with high space utilization while ens
 | data/       | The cutter model and packing models  |
 | output/     | The packing results                  |
 
-
-
 ## 🔧 Requirements (recommended)
 
 * GPU: NVIDIA GPU
@@ -26,8 +24,6 @@ Chapper framework achieves compact packing with high space utilization while ens
 * CUDA: 12.6
 
 * Visual Studio: 2022
-
-
 
 ## 📦 Dependencies
 
@@ -43,11 +39,6 @@ The following libraries are required (included in /package):
 
 This project is written in C++. Prior to compiling it, you should install all dependencies and include all relevant code files.
 
-
-
 ## License
 
 All rights about the program are reserved by the authors of this project. The programs can only be used for research purpose. In no event shall the author be liable to any party for direct, indirect, special, incidental, or consequential damage arising out of the use of this program.
-
-
-
