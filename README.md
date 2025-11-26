@@ -1,4 +1,4 @@
-# Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing[Project page]
+# Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing[[Project page](https://zmzhang0.github.io/projects/Chapper/index.html)]
 
 > SIGGRAPH Asia 2025 (Journal Track, ACM Transactions on Graphics)
 
