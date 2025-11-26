@@ -1,4 +1,4 @@
-# Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing[Project page]
+# Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing[[Project page](https://zmzhang0.github.io/projects/Chapper/index.html)]
 
 > SIGGRAPH Asia 2025 (Journal Track, ACM Transactions on Graphics)
 
@@ -24,12 +24,10 @@ This project uses and modifies the following external repositories:
 1. **CUDA_VOXEL**
    Original code from [Forceflow/cuda_voxelizer](https://github.com/Forceflow/cuda_voxelizer)
 
-
-
 2. **VBM (Visibility-based Marching)**
    Original code from [IbrahimSquared/visibility-heuristic-path-planner](https://github.com/IbrahimSquared/visibility-heuristic-path-planner)
 
-   *
+
 
 ## 🔧 Requirements (recommended)
 
