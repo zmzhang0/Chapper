@@ -226,8 +226,7 @@ void InternalVisualHull(const std::vector<bool>& h_C, std::vector<int>& visibili
 			}
 		}
 
-	if (OutPut2DResult)
-		Int2VoxelUseColorBar("output/midOutput/2d-Visiblity.obj", visibility, VoxelSize(VOXELSIZE));
+
 }
 
 void AddBorder(std::vector<bool>& container) {
@@ -266,14 +265,6 @@ void AddBorder(std::vector<bool>& container) {
 				}
 			}
 
-	if (ForFabrication) {
-		for (int ix = 0; ix < NX; ix++)
-			for (int iy = 0; iy < NY; iy++)
-				for (int iz = 0; iz < NZ; iz++) {
-					if (iz >= 47)
-						container[ix * NY * NZ + iy * NZ + iz] = 1;
-				}
-	}
 }
 
 void RemoveBorder(const std::vector<bool>& container, std::vector<bool>& containerNoBorder) {
@@ -971,15 +962,7 @@ void PackingInfo::ExportIVHTInfo(ofstream& txtout, const vector<int> connected_o
 
 	ComputeVis(NFV_objects_comb[comb_num], visibility);
 
-	if (OutPut2DResult)
-	{
-		vector<bool> material(TX, false);  
-		for (int m = 0; m < TX; m++)
-			if (visibility[m] == 0)
-				material[m] = true;
-		Bool2Voxel("output/midOutput/IVHT/Material_" + std::to_string(layer) + "_" + std::to_string(unique_id) + "_visibility.obj",
-			material, VoxelColor(0.6, 0.9, 0.7), VoxelSize(VOXELSIZE));
-	}
+	
 
 	int comp_tmp = computeConnectedComponent(visibility, connected_objects, visited);
 
@@ -1935,17 +1918,7 @@ void PackingInfo::ComputeDisassembleOrder()
 					RemainingMaterial[ix * NY * NZ + iy * NZ + iz] = false;
 			}
 	
-	if (ForFabrication) {
-		for (int ix = 0; ix < NX; ix++)
-			for (int iy = 0; iy < NY; iy++)
-				for (int iz = 0; iz < NZ; iz++) {
-					if (iz >= 47)
-						RemainingMaterial[ix * NY * NZ + iy * NZ + iz] = false;
-
-					if(ix == 0 || ix == NX - 1 || iy == 0 || iy == NY - 1 || iz == 0 || iz == 47)
-						RemainingMaterial[ix * NY * NZ + iy * NZ + iz] = false;
-				}
-	}
+	
 
 	shared_ptr<TreeNode> current = root;
 	if (root->data.size() == 1) {
